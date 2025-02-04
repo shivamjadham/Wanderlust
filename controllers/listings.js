@@ -49,6 +49,7 @@ module.exports.renderNewForm =  (req,res)=>{
         price:req.body.listing.price,
         country:req.body.listing.country,
         location:req.body.listing.location,
+         category:req.body.listing.category,
     });
 
    newListing.owner =req.user._id;
