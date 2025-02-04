@@ -5,6 +5,12 @@ module.exports.index = async (req,res)=>{
     res.render("listings/index.ejs",{allListings});
 };
 
+module.exports.category = async (req,res)=>{
+    let {c} = req.params;
+    const listing= await Listing.find({category:{$in: c}});
+    res.render("listings/index.ejs",{listing});
+};
+
 module.exports.renderNewForm =  (req,res)=>{
     res.render("listings/new.ejs");
  };
