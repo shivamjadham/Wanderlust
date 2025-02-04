@@ -9,8 +9,8 @@ module.exports.index = async (req,res)=>{
 
 module.exports.category = async (req,res)=>{
     let {c} = req.params;
-    const listing= await Listing.find({category:{$in: c}});
-    res.render("listings/index.ejs",{listing});
+    const allListings= await Listing.find({category:{$in: c}});
+    res.render("listings/index.ejs",{allListings});
 };
 
 module.exports.renderNewForm =  (req,res)=>{
