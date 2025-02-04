@@ -17,7 +17,7 @@ const upload = multer({storage });
 //new Route   
 router.get("/new",isLoggedIn,ListingController.renderNewForm);
 //category
-router.get("/category/:c",isLoggedIn,ListingController.category);
+router.get("/category/:c",wrapAsync(ListingController.category));
 
 router 
    .route("/")
