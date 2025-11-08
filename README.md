@@ -35,5 +35,5 @@ To run the project locally, follow these steps:
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/yourusername/wanderlust.git
-   cd wanderlust
+   git clone https://github.com/shivamjadham/wanderlust.git
+   
